@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: productsApi
+
+  profiles:
+    default: local
+
