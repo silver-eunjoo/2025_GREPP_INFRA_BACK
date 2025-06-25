@@ -9,9 +9,9 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3307/est_product_exp
-    username: root
-    password:
+    url: jdbc:mysql://localhost:3306/grepp_exp_db
+    username: happy
+    password: day
 
   jpa:
     properties:
