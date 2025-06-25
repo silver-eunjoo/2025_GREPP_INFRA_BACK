@@ -23,6 +23,6 @@ jobs:
       - name: releasing
         uses: ncipollo/release-action@v1
         with:
-          tag: ${{ steps.tag_version.outputs.new_tag }}
-          name: ${{ steps.tag_version.outputs.new_tag }}
+          tag: ${{ steps.tag_version.outputs.new_version }}
+          name: ${{ steps.tag_version.outputs.new_version }}
           body: ${{ steps.tag_version.outputs.changelog }}
