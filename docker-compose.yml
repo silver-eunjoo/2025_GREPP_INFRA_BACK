@@ -1,0 +1,29 @@
+services :
+
+  grepp-db:
+    image: mysql
+    container_name: grepp-db
+    ports:
+      - "3308:3306"
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_USER=grepp_app_1
+      - MYSQL_PASSWORD=grepp_app_1!
+      - MYSQL_DATABASE=grepp_exp_db
+    networks:
+      - net_1
+
+  grepp-app:
+    image: grepp-app:0.2
+    container_name: grepp-app
+    ports:
+      - "8080:8080"
+    networks:
+      - net_1
+    depends_on:
+      - grepp-db # 서비스 이름 기재하기
+
+networks:
+  net_1:
+    name: net_1
+    driver: bridge
