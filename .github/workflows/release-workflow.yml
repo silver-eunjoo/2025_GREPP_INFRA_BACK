@@ -6,7 +6,7 @@ on:
        - main
 
 env:
-  REGISTRY : ghrc.io
+  REGISTRY : ghcr.io
 #  IMAGE_NAME: 2025_GREPP_INFRA_BACK
   IMAGE_NAME: ${{ github.repository }}
 
