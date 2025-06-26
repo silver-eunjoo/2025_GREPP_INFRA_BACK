@@ -23,7 +23,8 @@ services :
       - net_1
 
   grepp-app:
-    image: grepp-app:0.2
+#    image: grepp-app:0.2
+    image: ghcr.io/silver-eunjoo/2025_grepp_infra_back:sha-fd39e0c
     container_name: grepp-app
     ports:
       - "8080:8080"
